@@ -1,0 +1,104 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+  <div class="container-fluid"> <a class="navbar-brand d-lg-none d-md-flex" href="#">Categories</a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="col-md-5">
+          <ul class="navbar-nav">
+            <li class="nav-item" (click)="filter('')"> <a class="nav-link" aria-current="page" routerLinkActive = "active">All</a> </li>
+            <li class="nav-item" (click)="filter('fashion')"> <a class="nav-link" routerLinkActive ="active">Fashion</a> </li>
+            <li class="nav-item" (click)="filter('electronics')"> <a class="nav-link" routerLinkActive = "active">Electronics</a> </li>
+            <li class="nav-item" (click)="filter('jewelery')"> <a class="nav-link" routerLinkActive = "active"> Jewllery </a></li>
+        </ul>
+        </div>
+        <div class="col-md-7">
+          <div class="d-flex form-inputs"> <input (keyup)="search($event)" class="form-control" type="text" placeholder="Search any product..."> <i class="fas fa-search"></i> </div>
+        </div>
+      </div>
+  </div>
+</nav>
+
+<div class="">
+  <div class="d-flex">
+    <div class="col-md-3 p-4 pt-5" style="background-color: rgb(240, 231, 231); text-align:center;">
+      <div>
+        <span class="fs-5">Price</span>
+          <hr>
+          <ul class="nav flex-column mb-auto">
+            <li class="nav-item" (click)="filterPrice(0,25)">
+              <a class="nav-link link-dark" aria-current="page">
+                Up to 25 EGP
+              </a>
+            </li>
+            <li class="nav-item " (click)="filterPrice(25,50)">
+              <a  class="nav-link  link-dark" aria-current="page">
+                25 to 50 EGP
+              </a>
+            </li>
+
+            <li class="nav-item " (click)="filterPrice(50,100)">
+              <a  class="nav-link  link-dark" aria-current="page">
+                50 to 100 EGP
+              </a>
+            </li>
+
+            <li class="nav-item " (click)="filterPrice(100,200)">
+              <a  class="nav-link  link-dark" aria-current="page">
+                100 to 200 EGP
+              </a>
+            </li>
+          </ul>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div>
+        <span class="fs-5">Rating</span>
+          <hr>
+          <ul class="nav flex-column mb-auto">
+            <li class="nav-item" (click)="filterRating(4,5)">
+              <a class="nav-link link-dark" aria-current="page">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Star_rating_5_of_5.png" style="width: 140px;">
+              </a>
+            </li>
+            <li class="nav-item " (click)="filterRating(3,4)">
+              <a  class="nav-link  link-dark" aria-current="page">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Star_rating_4_of_5.png" style="width: 140px;">
+              </a>
+            </li>
+
+            <li class="nav-item " (click)="filterRating(2,3)">
+              <a  class="nav-link  link-dark" aria-current="page">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Star_rating_3_of_5.png" style="width: 140px;">
+              </a>
+            </li>
+
+            <li class="nav-item " (click)="filterRating(1,2)">
+              <a  class="nav-link  link-dark" aria-current="page">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Star_rating_2_of_5.png" style="width: 140px;">
+              </a>
+            </li>
+            <li class="nav-item " (click)="filterRating(0,1)">
+              <a  class="nav-link  link-dark" aria-current="page">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Star_rating_1_of_5.png" style="width: 140px;">
+              </a>
+            </li>
+          </ul>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
+        <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
+            <div *ngFor="let pro of filterCategory | filter:searchKey:'title'" class="col">
+                <div class="card h-100 shadow-sm"> <img [src]="pro.image" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-primary">{{pro.rating.rate}}</span> <span class="float-end price-hp">{{pro.price}}€</span> </div>
+                        <h5 class="card-title">{{pro.title}}</h5>
+                        <div class="text-center my-4"> <a class="btn btn-warning" (click) = "goToProduct(pro)">View Details</a> </div>
+                        <div class="text-center mb-3"> <a class="btn btn-warning" (click)=addtocart(pro)>Add To Cart</a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>

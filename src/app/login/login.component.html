@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-7">
+            <div class="card px-5 py-4" id="form1">
+                <div class="form-data" v-if="!submitted">
+                    <div class="text-center mb-4">
+                        <h4>Login Now</h4>
+                    </div>
+                    <div class="forms-inputs mb-4"> 
+                        <span>Email</span> 
+                        <input type="text" class="w-100">
+                        <div class="invalid-feedback">A valid email is required!</div>
+                    </div>
+                    <div class="forms-inputs mb-4"> 
+                        <span>Password</span> 
+                        <input type="password" class="w-100">
+                        <div class="invalid-feedback">Password must be 8 character!</div>
+                    </div>
+                    <div class="mb-3"> <button type="submit" class="btn btn-dark w-100">Login</button> </div>
+                </div>
+                <!--
+                <div class="success-data" v-else>
+                    <div class="text-center d-flex flex-column"> <i class='bx bxs-badge-check'></i> <span class="text-center fs-3">Your has been created <br> Successfully</span> </div>
+                </div>-->
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,77 @@
+<ng-container *ngIf="products.length !=0">
+<section class="h-100" style="background-color: #eee;">
+  <div class="container h-100 py-5">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-10">
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h3 class="fw-normal mb-0 text-black">Shopping Cart</h3>
+        </div>
+
+        <div *ngFor="let item of products;" class="card rounded-3 mb-4">
+          <div class="card-body p-4">
+            <div class="row d-flex justify-content-between align-items-center">
+              <div class="col-md-2 col-lg-2 col-xl-2">
+                <img src="{{item.image}}"
+                  class="img-fluid rounded-3" alt="Cotton T-shirt">
+              </div>
+              <div class="col-md-3 col-lg-3 col-xl-3">
+                <p class="lead fw-normal mb-2">{{item.title}}</p>
+              </div>
+              <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                <h5 class="mb-0">${{item.price * item.quantity}}</h5>
+              </div>
+              <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                <button (click) = "dec(item)" class="btn btn-link px-2">
+                  <i class="fas fa-minus"></i>
+                </button>
+
+                <input [(ngModel)] = "item.quantity"  min="1" name="quantity"
+                  class="form-control form-control-sm"/>
+
+                <button class="btn btn-link px-2" (click) = "inc(item)">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+              <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                <a (click)="removeItem(item)" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-4">
+          <div class="card-body p-4 d-flex flex-row">
+            <div class="form-outline flex-fill">
+              <label class="form-label" for="form1">Discound code</label>
+              <input type="text" id="form1" class="form-control form-control-lg" />
+              <button type="button" class="btn btn-outline-warning mt-3" style="width: 200px;">Apply</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <button (click)="emptycart()" type="button" class="btn btn-warning btn-block btn-lg">Empty Cart</button>
+            <button type="button" class="btn btn-warning btn-block btn-lg mx-3">Checkout</button>
+            <button routerLink="/Products" type="button" class="btn btn-warning btn-block btn-lg mx-3">Shop More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</ng-container>
+<ng-container *ngIf="products.length == 0">
+  <div class="container">
+      <div class="cards">
+          <h5 class="card-title">My Cart</h5>
+      </div>
+      <div class="center">
+          <img src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" alt="">
+          <h4>Your cart is empty!</h4>
+          <h6>Add item to it now</h6>
+          <button routerLink="/Products" class="btn btn-primary">Shop Now</button>
+      </div>
+  </div>
+</ng-container>

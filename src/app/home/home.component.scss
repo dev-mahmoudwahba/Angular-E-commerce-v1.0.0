@@ -1,0 +1,289 @@
+.btn {
+  height: 35px;
+  width: 170px;
+  border: none;
+  border-radius: 20px;
+  background-color: #633a9c;
+  font-size: 14px;
+  font-weight: 500
+}
+
+.text {
+  font-size: 23px;
+  font-weight: bold
+}
+
+.imagename {
+  font-size: 14px;
+  font-weight: bold
+}
+
+
+.imgserv {
+  width: 100%;
+  height: 100%;
+}
+
+
+.review {
+  font-size: 30px;
+  font-weight: 600;
+  padding: 30px 0
+}
+
+.name {
+  font-size: 18px;
+  color: #c1e718;
+  margin: 0
+}
+
+.job {
+  color: #c8c8c8;
+  font-size: 14px
+}
+
+.carousel-inner {
+  max-width: 800px
+}
+
+.fa-minus {
+  font-size: 14px
+}
+
+.carousel-indicators {
+  bottom: -20px;
+  right: 0;
+  margin: 0
+}
+
+.carousel-indicators [data-bs-target] {
+  height: 10px;
+  border: 2px solid black;
+  width: 10px;
+  background-color: inherit;
+  border-radius: 50%
+}
+
+.carousel-indicators .active {
+  border: 2px solid transparent;
+  background-color: #c1e718
+}
+
+.left {
+  color: rgb(20, 20, 20);
+  font-weight: 600
+}
+
+.right {
+  color: rgb(12, 12, 12);
+  font-weight: 600
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  position: relative
+}
+  .review {
+      font-size: 14px;
+      font-weight: 600
+  }
+
+  .name {
+      font-size: 13px
+  }
+
+  .job {
+      font-size: 10px
+  }
+
+  .right {
+    font-size: 12px  
+  }
+
+  .left {
+      font-size: 12px
+  }
+
+  .carousel-indicators [data-bs-target] {
+      height: 8px;
+      border: 1px solid black;
+      width: 8px;
+      background-color: inherit;
+      border-radius: 50%;
+  }
+  .carder {
+    border: none;
+    border-radius: 20px;
+    transition: all 0.5s;
+    cursor: pointer
+}
+
+.carder:hover {
+    transform: scale(1.1)
+}
+
+.heading {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center
+}
+
+.name {
+    font-size: 15px;
+    font-weight: bold
+}
+
+.square {
+    background-color: #fedcdd;
+    height: 30px;
+    width: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.email {
+    font-size: 14px;
+    margin-left: 25px;
+    font-weight: bold
+}
+
+.dummytext {
+    font-size: 12px;
+    font-weight: normal;
+    color: #848590
+}
+
+.icons i {
+    color: #FA222A;
+    margin-left: 25px
+}
+
+.icons span {
+    font-size: 13px;
+    font-weight: normal;
+    color: #848590
+}
+
+.square1 {
+    background-color: #cfe3fe;
+    height: 30px;
+    width: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.icons1 i {
+    color: #497eea;
+    margin-left: 25px
+}
+
+.icons1 span {
+    font-size: 13px;
+    font-weight: normal;
+    color: #848590
+}
+
+.square2 {
+    background-color: #ffefc5;
+    height: 30px;
+    width: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.icons2 i {
+    color: #ffc227;
+    margin-left: 25px
+}
+
+.icons2 span {
+    font-size: 13px;
+    font-weight: normal;
+    color: #848590
+}
+
+.square5 {
+    background-color: #41cfff;
+    height: 30px;
+    width: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.icons5 i {
+    color: #41cfff;
+    margin-left: 25px
+}
+
+.icons5 span {
+    font-size: 13px;
+    font-weight: normal;
+    color: #848590
+}
+
+.square4 {
+    background-color: #eae6fd;
+    height: 30px;
+    width: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.icons4 i {
+    color: #6a35ff;
+    margin-left: 25px
+}
+
+.icons4 span {
+    font-size: 13px;
+    font-weight: normal;
+    color: #848590
+}
+
+.square3 {
+    background-color: #fedfce;
+    height: 30px;
+    width: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.icons3 i {
+    color: #ff8339;
+    margin-left: 25px
+}
+
+.icons3 span {
+    font-size: 13px;
+    font-weight: normal;
+    color: #848590
+}
+
+.carousel-indicators .active {
+      border: 1px solid transparent;
+      background-color: #c1e718
+}
+
+
+.cardcon {
+  padding: 10px;
+  height: 250px;
+  border: none;
+  -webkit-box-shadow: 0px 1px 9px 3px rgba(219, 210, 219, 1);
+  -moz-box-shadow: 0px 1px 9px 3px rgba(219, 210, 219, 1);
+  box-shadow: 0px 1px 9px 3px rgba(219, 210, 219, 1);
+  text-align:center;
+  padding-top:70px;
+}

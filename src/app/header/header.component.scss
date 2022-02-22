@@ -1,0 +1,50 @@
+.section-header{
+  background-color: #1b1b1b;
+}
+ul{
+  list-style: none;
+}
+ul li a{
+  color: #fff;
+}
+ul li a.active{
+  color: #e96b56;
+}
+
+.form-inputs {
+  position: relative
+}
+
+.form-inputs .form-control {
+  height: 45px
+}
+
+.form-inputs .form-control:focus {
+  box-shadow: none;
+  border: 1px solid #000;
+
+}
+
+.form-inputs i {
+  position: absolute;
+  right: 10px;
+  top: 15px
+}
+.shopping{
+  color: #fff;
+}
+.shop-bag {
+  background-color: rgb(51, 46, 46);
+  color: #fff;
+  height: 50px;
+  width: 50px;
+  font-size: 25px;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center
+}
+
+.qty {
+  font-size: 12px
+}

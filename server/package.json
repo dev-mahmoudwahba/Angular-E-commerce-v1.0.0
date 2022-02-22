@@ -1,0 +1,21 @@
+{
+  "name": "lab_project",
+  "version": "1.0.0",
+  "description": "lab project ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "indriver"
+  ],
+  "author": "mostafa mohamed",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "mongodb": "^4.3.1",
+    "mongoose": "^6.1.7",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {}
+}
